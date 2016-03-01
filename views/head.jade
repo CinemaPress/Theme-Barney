@@ -1,0 +1,24 @@
+meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+title= title
+meta(name='description', content=description.substr(0, 170))
+meta(name='keywords', content=keywords)
+link(rel='search', type='application/opensearchdescription+xml', href='/js/opensearch.xml', title='Фильмы онлайн')
+link(rel='shortcut icon', href='/favicon.ico')
+if movie
+    meta(property='og:title', content=title)
+    meta(property='og:description', content=description.substr(0, 170))
+    meta(property='og:type', content='video.movie')
+    meta(property='og:url', content='http://' + domain + movie.url)
+    meta(property='og:image', content=movie.picture)
+    meta(property='og:video', content='http://yohoho.xyz/online?title=' + encodeURIComponent(movie.title))
+    meta(property='og:video:duration', content='7384')
+    meta(property='og:video:type', content='flash')
+    meta(property='ya:ovs:upload_date', content=movie.premiere.replace(/([0-9]{4})/, 2015))
+    meta(property='ya:ovs:adult', content='false')
+else
+    meta(property='og:title', content=title)
+    meta(property='og:description', content=description.substr(0, 170))
+    meta(property='og:type', content='website')
+script(type='application/ld+json')!= JSON.stringify(schema)
+style
+    include ../public/css/style.css

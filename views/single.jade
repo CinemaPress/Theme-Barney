@@ -1,0 +1,106 @@
+doctype html
+html(lang='ru-RU')
+    head
+        include head
+    body
+        .header_black
+        .wrapper
+            .contener
+                .contener2
+                    .content
+                        #content
+                            .fullstory(style='width:95%;')
+                                .shortstorytitle
+                                    h1= movie.title_ru + ' (' + movie.year + ')'
+                                .fullimg
+                                    #news(style='display:inline;')
+                                        a(href=movie.url)
+                                            img(src=movie.poster, style='float:left; width:200px;', alt=movie.title_ru + ' (' + movie.year + ')', title=movie.title_ru + ' (' + movie.year + ')')
+                                        = movie.description
+                                        br
+                                        br
+                                        b Год выпуска:
+                                        != ' ' + movie.year_url
+                                        br
+                                        b Страна:
+                                        != ' ' + movie.countries_url
+                                        br
+                                        b Жанр:
+                                        != ' ' + movie.genres_url
+                                        br
+                                        b Премьера:
+                                        != ' ' + movie.premiere
+                                        br
+                                        br
+                                        b Рейтинг КиноПоиск:
+                                        != ' ' + movie.kp_rating / 10 + ' (' + movie.kp_vote + ')'
+                                        br
+                                        b Рейтинг IMDB:
+                                        != ' ' + movie.imdb_rating / 10 + ' (' + movie.imdb_vote + ')'
+                                        br
+                                        br
+                                        b Режиссер:
+                                        != ' ' + movie.directors_url
+                                        br
+                                        b В ролях:
+                                        != ' ' + movie.actors_url
+                                .stronk
+                                    strong= 'Смотреть онлайн ' + movie.title_ru + ' (' + movie.year + ')' + ' в хорошем качестве'
+                            .bot-left
+                                .bot-navigation(style='text-align:center;')
+                                    span.active= 'Информация'
+                                    a(href=movie.url + '/trailer')= 'Трейлер'
+                                    a(href=movie.url + '/download')= 'Скачать'
+                                    a(href=movie.url + '/online')= 'Смотреть онлайн'
+                                    a(href=movie.url + '/picture')= 'Кадры'
+                            div(style='clear:both')
+                            .section
+                                ul.tabs
+                                    li.current Смотреть онлайн
+                                    li Скачать
+                                    li Трейлер
+                                div(style='clear:both')
+                                .box.visible(style='display: block; background: rgb(0, 0, 0); ')
+                                    if abuse.indexOf(movie.id) == -1
+                                        #yohoho(data-title=movie.title + ' (' + movie.year + ')')
+                                    else
+                                        p(style='text-align:center; color:#fff; padding:50px;') Фильм закрыт по просьбе правообладателя!
+                                .box(style='display: none; background: rgb(0, 0, 0); ')
+                                    if abuse.indexOf(movie.id) == -1
+                                        #yohoho-torrent(data-title=movie.title + ' (' + movie.year + ')')
+                                    else
+                                        p(style='text-align:center; color:#fff; padding:50px;') Фильм закрыт по просьбе правообладателя!
+                                .box(style='display: none; background: rgb(0, 0, 0); ')
+                                    #yohoho-online(data-title=movie.title_ru + ' (' + movie.year + ') трейлер')
+                            .icons2
+                                div(style='padding-left:6px;')
+                                    ul.social-likes
+                                        li.vkontakte(title='Поделиться ссылкой во Вконтакте') Поделиться
+                                        li.facebook(title='Поделиться ссылкой на Фейсбуке') Нравится
+                                        li.twitter(title='Поделиться ссылкой в Твиттере') Твитнуть
+                                        li.odnoklassniki(title='Поделиться ссылкой в Одноклассниках') Класс!
+                                        li.mailru(title='Поделиться ссылкой в Моём мире') Нравится
+                            each categories in movies
+                                if categories.length
+                                    each data in categories
+                                        .relatednews_title(style='text-align:center;')
+                                            i!= data.name
+                                        .relatednews
+                                            ul.ul_related(style='text-align:center; margin: 10px auto;')
+                                                each movie in data.related
+                                                    li
+                                                        a(href=movie.url, title=movie.title_ru + ' (' + movie.year + ')')
+                                                            img(src=movie.poster, style='height:165px; width:110px')
+                                                            = movie.title_ru + ' (' + movie.year + ')'
+                            div(style='clear:both')
+                            if disqus
+                                #comments-list(style='padding:20px;')
+                                    #disqus_thread
+                                    script
+                                        | var disqus_config=function(){this.page.url="http://#{domain}#{movie.url}",this.page.identifier="http://#{domain}#{movie.url}"};!function(){var e=document,t=e.createElement("script");t.src="//#{disqus}.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)}();
+                    span.leftblok_contener
+                        include leftmenu
+            .header
+                include header
+            .footer
+                include footer

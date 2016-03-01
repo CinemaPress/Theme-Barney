@@ -1,0 +1,136 @@
+doctype html
+html(lang='ru-RU')
+    head
+        include head
+    body
+        .header_black
+        .wrapper
+            .contener
+                .contener2
+                    .content
+                        .rek_top
+                            h1= 'Лучшие фильмы года'
+                        div(style='border-top: 1px solid #404040;background: #2b2b2b;position: relative;border-left: 1px solid #404040;')
+                            each movie in year
+                                .shortstory(style='width:95%;')
+                                    .shortstorytitle
+                                        h2.zagolovki
+                                            a(href=movie.url)= movie.title_ru + ' (' + movie.year + ')'
+                                    .shortimg
+                                        a(href=movie.url)
+                                            img(src=movie.poster, style='float:left; width:200px;', alt=movie.title_ru + ' (' + movie.year + ')', title=movie.title_ru + ' (' + movie.year + ')')
+                                        = movie.description
+                                        br
+                                        br
+                                        b Год выпуска:
+                                        != ' ' + movie.year_url
+                                        br
+                                        b Страна:
+                                        != ' ' + movie.countries_url
+                                        br
+                                        b Жанр:
+                                        != ' ' + movie.genres_url
+                                        br
+                                        b Премьера:
+                                        != ' ' + movie.premiere
+                                        br
+                                        br
+                                        b Рейтинг КиноПоиск:
+                                        != ' ' + movie.kp_rating / 10 + ' (' + movie.kp_vote + ')'
+                                        br
+                                        b Рейтинг IMDB:
+                                        != ' ' + movie.imdb_rating / 10 + ' (' + movie.imdb_vote + ')'
+                                        br
+                                div(style='clear:both')
+                                .icons
+                                    span.podrobnee(style='padding: 4px 0 4px 20px;')
+                                        a(href=movie.url)
+                                            span.fbutton-img
+                                                img(src='/img/viewmore.png', border='0', alt='Смотреть ' + movie.title_ru + ' (' + movie.year + ')' + ' онлайн')
+                            div(style='clear:both')
+                        .rek_top
+                            h1= 'Лучшие фильмы за все время'
+                        div(style='border-top: 1px solid #404040;background: #2b2b2b;position: relative;border-left: 1px solid #404040;')
+                            each movie in bests
+                                .shortstory(style='width:95%;')
+                                    .shortstorytitle
+                                        h2.zagolovki
+                                            a(href=movie.url)= movie.title_ru + ' (' + movie.year + ')'
+                                    .shortimg
+                                        a(href=movie.url)
+                                            img(src=movie.poster, style='float:left; width:200px;', alt=movie.title_ru + ' (' + movie.year + ')', title=movie.title_ru + ' (' + movie.year + ')')
+                                        = movie.description
+                                        br
+                                        br
+                                        b Год выпуска:
+                                        != ' ' + movie.year_url
+                                        br
+                                        b Страна:
+                                        != ' ' + movie.countries_url
+                                        br
+                                        b Жанр:
+                                        != ' ' + movie.genres_url
+                                        br
+                                        b Премьера:
+                                        != ' ' + movie.premiere
+                                        br
+                                        br
+                                        b Рейтинг КиноПоиск:
+                                        != ' ' + movie.kp_rating / 10 + ' (' + movie.kp_vote + ')'
+                                        br
+                                        b Рейтинг IMDB:
+                                        != ' ' + movie.imdb_rating / 10 + ' (' + movie.imdb_vote + ')'
+                                        br
+                                div(style='clear:both')
+                                .icons
+                                    span.podrobnee(style='padding: 4px 0 4px 20px;')
+                                        a(href=movie.url)
+                                            span.fbutton-img
+                                                img(src='/img/viewmore.png', border='0', alt='Смотреть ' + movie.title_ru + ' (' + movie.year + ')' + ' онлайн')
+                            div(style='clear:both')
+                        .rek_top
+                            h1= 'Премьеры фильмов'
+                        div(style='border-top: 1px solid #404040;background: #2b2b2b;position: relative;border-left: 1px solid #404040;')
+                            each movie in premieres
+                                .shortstory(style='width:95%;')
+                                    .shortstorytitle
+                                        h2.zagolovki
+                                            a(href=movie.url)= movie.title_ru + ' (' + movie.year + ')'
+                                    .shortimg
+                                        a(href=movie.url)
+                                            img(src=movie.poster, style='float:left; width:200px;', alt=movie.title_ru + ' (' + movie.year + ')', title=movie.title_ru + ' (' + movie.year + ')')
+                                        = movie.description
+                                        br
+                                        br
+                                        b Год выпуска:
+                                        != ' ' + movie.year_url
+                                        br
+                                        b Страна:
+                                        != ' ' + movie.countries_url
+                                        br
+                                        b Жанр:
+                                        != ' ' + movie.genres_url
+                                        br
+                                        b Премьера:
+                                        != ' ' + movie.premiere
+                                        br
+                                        br
+                                        b Рейтинг КиноПоиск:
+                                        != ' ' + movie.kp_rating / 10 + ' (' + movie.kp_vote + ')'
+                                        br
+                                        b Рейтинг IMDB:
+                                        != ' ' + movie.imdb_rating / 10 + ' (' + movie.imdb_vote + ')'
+                                        br
+                                div(style='clear:both')
+                                .icons
+                                    span.podrobnee(style='padding: 4px 0 4px 20px;')
+                                        a(href=movie.url)
+                                            span.fbutton-img
+                                                img(src='/img/viewmore.png', border='0', alt='Смотреть ' + movie.title_ru + ' (' + movie.year + ')' + ' онлайн')
+                            div(style='clear:both')
+                    span.leftblok_contener
+                        include leftmenu
+            .header
+                include header
+            .footer
+                include footer
