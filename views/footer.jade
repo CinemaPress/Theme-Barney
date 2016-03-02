@@ -3,6 +3,6 @@
 span(style='float:left; padding: 12px; padding-left:3px; ')
     = 'Для связи: '
     b#cinemapress
-    script= "document.getElementById('cinemapress').textContent = '" + email + "'.replace('CinemaPress','&#64;');"
+    script!= "document.getElementById('cinemapress').textContent = '" + email + "'.replace('CinemaPress','@');"
 script(src='http://yohoho.xyz/yo.js')
 script(src='/js/script.js')
