@@ -20,7 +20,7 @@ div(style='clear:both')
             a.carousel_prev.carousel_left(href='') prev
             .carousel_container
                 ul.portfolio_items
-                    if top
+                    if top && top.length
                         each movie in top
                             li
                                 .inner

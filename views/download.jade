@@ -16,34 +16,41 @@ html(lang='ru-RU')
                                     #news(style='display:inline;')
                                         a(href=movie.url)
                                             img(src=movie.poster, style='float:left; width:200px;', alt=movie.title_ru + ' (' + movie.year + ')', title=movie.title_ru + ' (' + movie.year + ')')
-                                        = movie.description
-                                        br
-                                        br
+                                        if movie.description
+                                            = movie.description
+                                            br
+                                            br
                                         b Год выпуска:
                                         != ' ' + movie.year_url
                                         br
-                                        b Страна:
-                                        != ' ' + movie.countries_url
-                                        br
-                                        b Жанр:
-                                        != ' ' + movie.genres_url
-                                        br
+                                        if movie.countries_url
+                                            b Страна:
+                                            != ' ' + movie.countries_url
+                                            br
+                                        if movie.genres_url
+                                            b Жанр:
+                                            != ' ' + movie.genres_url
+                                            br
                                         b Премьера:
                                         != ' ' + movie.premiere
                                         br
                                         br
-                                        b Рейтинг КиноПоиск:
-                                        != ' ' + movie.kp_rating / 10 + ' (' + movie.kp_vote + ')'
+                                        if movie.kp_rating
+                                            b(style='color:#fff;') Рейтинг КиноПоиск:
+                                            != ' ' + movie.kp_rating / 10 + ' (' + movie.kp_vote + ')'
+                                            br
+                                        if movie.imdb_rating
+                                            b(style='color:#fff;') Рейтинг IMDB:
+                                            != ' ' + movie.imdb_rating / 10 + ' (' + movie.imdb_vote + ')'
+                                            br
                                         br
-                                        b Рейтинг IMDB:
-                                        != ' ' + movie.imdb_rating / 10 + ' (' + movie.imdb_vote + ')'
-                                        br
-                                        br
-                                        b Режиссер:
-                                        != ' ' + movie.directors_url
-                                        br
-                                        b В ролях:
-                                        != ' ' + movie.actors_url
+                                        if movie.directors_url
+                                            b Режиссер:
+                                            != ' ' + movie.directors_url
+                                            br
+                                        if movie.actors_url
+                                            b В ролях:
+                                            != ' ' + movie.actors_url
                                 .stronk
                                     strong= 'Скачать torrent ' + movie.title_ru + ' (' + movie.year + ')' + ' в хорошем качестве'
                             .bot-left

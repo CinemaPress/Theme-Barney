@@ -12,11 +12,12 @@ html(lang='ru-RU')
                             h1= title
                         div(style='border-top: 1px solid #404040;background: #2b2b2b;position: relative;border-left: 1px solid #404040;')
                         #content(style='text-align:center; margin:30px;')
-                            each val, key in categories
-                                - size = 48 / categories.max
-                                if key != 'max'
-                                    a(href=url + '/' + key, style='font-size:' + (24 + val * size) + 'px')= key
-                                    span(style='font-size: 20px; color:#ccc;')!= '&nbsp;(' + val * 9 + '&nbsp;шт.) '
+                            if categories
+                                each val, key in categories
+                                    - size = 48 / categories.max
+                                    if key != 'max'
+                                        a(href=url + '/' + key, style='font-size:' + (24 + val * size) + 'px')= key
+                                        span(style='font-size: 20px; color:#ccc;')!= '&nbsp;(' + val * 9 + '&nbsp;шт.) '
                             div(style='clear:both')
                     span.leftblok_contener
                         include leftmenu
