@@ -2,11 +2,11 @@
 :art: Шаблон кино-сайта Barney (kinogo.cc)
 
 ## Установка
-- Скачиваете архив;
-- Распакавываете в папку /themes/barney
+1. [Скачать архив](https://github.com/CinemaPress/Theme-Barney/archive/master.zip)
+2. Распаковать содержимое папки **/Theme-Barney** в папку **/themes/barney**
+3. Изменить название темы в **/config/config.js** ("theme" = "barney")
 
-###### Должно выглядеть так:
+## Установка через установщик тем CinemaPress CMS
 ```
-/themes/barney/public
-/themes/barney/views
+sh theme.sh barney
 ```
