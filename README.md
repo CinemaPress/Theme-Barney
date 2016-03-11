@@ -6,9 +6,9 @@
 ## Установка
 1. [Скачать архив](https://github.com/CinemaPress/Theme-Barney/archive/master.zip)
 2. Распаковать содержимое папки **/Theme-Barney** в папку **/themes/barney**
-3. Изменить название темы в **/config/config.js** ("theme" = "barney")
+3. Изменить название темы в админ-панели на **barney**
 
 ## Установка через установщик тем CinemaPress CMS
 ```
-sh theme.sh barney
+~# sh theme.sh barney
 ```
