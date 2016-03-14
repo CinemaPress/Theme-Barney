@@ -19,6 +19,8 @@ else
     meta(property='og:title', content!=title)
     meta(property='og:description', content!=description.substr(0, 170))
     meta(property='og:type', content='website')
+if code.head
+    != code.head
 script(type='application/ld+json')!= JSON.stringify(schema)
 style
     include ../public/css/style.css
