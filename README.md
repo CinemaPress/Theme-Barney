@@ -1,7 +1,7 @@
 # Theme Barney
-:art: Шаблон кино-сайта Barney (kinogo.cc)
+:art: Шаблон кино-сайта Barney (kinogo.co)
 
-![Шаблон кино-сайта Barney (kinogo.cc)](https://raw.githubusercontent.com/CinemaPress/Theme-Barney/master/screenshot.jpg "Шаблон кино-сайта Barney (kinogo.cc)")
+![Шаблон кино-сайта Barney (kinogo.co)](https://raw.githubusercontent.com/CinemaPress/Theme-Barney/master/screenshot.jpg "Шаблон кино-сайта Barney (kinogo.cc)")
 
 ## Установка
 1. [Скачать архив](https://github.com/CinemaPress/Theme-Barney/archive/master.zip)
