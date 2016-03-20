@@ -17,7 +17,7 @@ html(lang='ru-RU')
                                         a(href=movie.url)
                                             img(src=movie.poster, style='float:left; width:200px;', alt=movie.title_ru + ' (' + movie.year + ')', title=movie.title_ru + ' (' + movie.year + ')')
                                         if movie.description
-                                            = movie.description
+                                            != movie.description
                                             br
                                             br
                                         b Год выпуска:
