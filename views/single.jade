@@ -64,21 +64,12 @@ html(lang='ru-RU')
                             .section
                                 ul.tabs
                                     li.current Смотреть онлайн
-                                    li Скачать
-                                    li Трейлер
                                 div(style='clear:both')
                                 .box.visible(style='display: block; background: rgb(0, 0, 0); ')
                                     if abuse.indexOf(movie.id) == -1
                                         #yohoho(data-title=movie.title + ' (' + movie.year + ')')
                                     else
                                         p(style='text-align:center; color:#fff; padding:50px;') Фильм закрыт по просьбе правообладателя!
-                                .box(style='display: none; background: rgb(0, 0, 0); ')
-                                    if abuse.indexOf(movie.id) == -1
-                                        #yohoho-torrent(data-title=movie.title + ' (' + movie.year + ')')
-                                    else
-                                        p(style='text-align:center; color:#fff; padding:50px;') Фильм закрыт по просьбе правообладателя!
-                                .box(style='display: none; background: rgb(0, 0, 0); ')
-                                    #yohoho-online(data-title=movie.title_ru + ' (' + movie.year + ') трейлер')
                             .icons2
                                 div(style='padding-left:6px;')
                                     ul.social-likes
