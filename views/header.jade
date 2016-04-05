@@ -7,7 +7,7 @@
         .yashare-auto-init(data-yasharel10n='ru', data-yasharetype='none', data-yasharequickservices='vkontakte,facebook,twitter,odnoklassniki,moimir')
     .search_panel
         span.searchbar
-            form(action='/#{urls.search}/title', name='searchform', method='get')
+            form(action='#{protocol}#{domain}/#{urls.search}/title', name='searchform', method='get')
                 input#story(name='q', value='Поиск', onblur="if(this.value=='') this.value='Поиск';", onfocus="if(this.value=='Поиск') this.value='';", type='text')
                 button.fbutton2(onclick='submit();', type='submit', title='ok', style='float: right;')
                     span ok

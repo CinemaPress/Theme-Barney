@@ -20,7 +20,7 @@ else
     meta(property='og:description', content!=description.substr(0, 170))
     meta(property='og:type', content='website')
     meta(property='og:url', content='#')
-    meta(property='og:image', content=protocol + domain + '/themes/barney/public/img/logo.png')
+    meta(property='og:image', content='#{protocol}#{domain}/themes/barney/public/img/logo.png')
 if code.head
     != code.head
 script(type='application/ld+json')!= JSON.stringify(schema)
