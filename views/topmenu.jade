@@ -6,14 +6,14 @@
                 tbody
                     tr
                         td.item
-                            a(href='/')
+                            a(href='#{protocol}#{domain}')
                                 span.name Главная
                         td.item
-                            a(href='/#{urls.year}/2016')
+                            a(href='#{protocol}#{domain}/#{urls.year}/2016')
                                 span.name Новинки
                         td.item
-                            a(href='/#{urls.type}/Сериалы')
+                            a(href='#{protocol}#{domain}/#{urls.type}/Сериалы')
                                 span.name Сериалы
                         td.item
-                            a(href='/#{urls.type}/Мультфильмы')
+                            a(href='#{protocol}#{domain}/#{urls.type}/Мультфильмы')
                                 span.name Мультфильмы

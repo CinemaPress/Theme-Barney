@@ -95,7 +95,7 @@ html(lang='ru-RU')
                                 #comments-list(style='padding:20px;')
                                     #disqus_thread
                                     script
-                                        | var disqus_config=function(){this.page.url="http://#{domain}#{movie.url}",this.page.identifier="http://#{domain}#{movie.url}"};!function(){var e=document,t=e.createElement("script");t.src="//#{disqus}.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)}();
+                                        | var disqus_config=function(){this.page.url="#{movie.url}",this.page.identifier="#{movie.url}"};!function(){var e=document,t=e.createElement("script");t.src="//#{disqus}.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)}();
                     span.leftblok_contener
                         include leftmenu
             .header
