@@ -15,4 +15,4 @@
 ```
 ###### Видео установки темы через установщик тем
 
-<a href="https://www.youtube.com/watch?v=ZZQ-UUscx2Y" target="_blank"><img src="https://cinemapress.org/images/admin/theme_player.png" width="600" alt="Установка темы на CinemaPress CMS"/></a>
+<a href="https://www.youtube.com/watch?v=ZZQ-UUscx2Y" target="_blank"><img src="https://raw.githubusercontent.com/CinemaPress/CinemaPress.github.io/master/images/admin/theme_player.png" width="600" alt="Установка темы на CinemaPress CMS"/></a>
