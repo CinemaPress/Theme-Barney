@@ -2,8 +2,10 @@ meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
 title!= title
 meta(name='description', content!=description.substr(0, 170))
 meta(name='keywords', content!=keywords)
+meta(name='viewport', content='width=device-width, initial-scale=1')
 link(rel='search', type='application/opensearchdescription+xml', href='/themes/barney/public/js/opensearch.xml', title='Фильмы онлайн')
 link(rel='shortcut icon', href='/themes/barney/public/favicon.ico')
+link(rel='stylesheet', href='/themes/barney/public/css/style.css')
 if movie
     meta(property='og:title', content!=title)
     meta(property='og:description', content!=description.substr(0, 170))
@@ -24,5 +26,3 @@ else
 if code.head
     != code.head
 script(type='application/ld+json')!= JSON.stringify(schema)
-style
-    include ../public/css/style.css

@@ -3,7 +3,7 @@
 span(style='float:left; padding: 12px; padding-left:3px; ')
     = 'Для связи: '
     b#cinemapress
-    script!= "document.getElementById('cinemapress').textContent = '" + email + "'.replace('CinemaPress','@');"
+    script!= "document.getElementById('cinemapress').textContent = '" + email.replace('@','.CinemaPress.') + "'.replace('.CinemaPress.','@');"
 script(src='https://yohoho.xyz/yo.js')
 script(src='/themes/barney/public/js/barney.js' async)
 if code.footer
