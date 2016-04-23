@@ -1,6 +1,6 @@
 meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
 title!= title
-meta(name='description', content!=description.substr(0, 170))
+meta(name='description', content!=description.substr(0, 160))
 meta(name='keywords', content!=keywords)
 meta(name='viewport', content='width=device-width, initial-scale=1')
 link(rel='search', type='application/opensearchdescription+xml', href='/themes/barney/public/js/opensearch.xml', title='Фильмы онлайн')
@@ -8,7 +8,7 @@ link(rel='shortcut icon', href='/themes/barney/public/favicon.ico')
 style= 'body {background: #000; color: #000;} a {color: #000;}'
 if movie
     meta(property='og:title', content!=title)
-    meta(property='og:description', content!=description.substr(0, 170))
+    meta(property='og:description', content!=description.substr(0, 160))
     meta(property='og:type', content='video.movie')
     meta(property='og:url', content=movie.url)
     meta(property='og:image', content=movie.picture)
@@ -19,7 +19,7 @@ if movie
     meta(property='ya:ovs:adult', content='false')
 else
     meta(property='og:title', content!=title)
-    meta(property='og:description', content!=description.substr(0, 170))
+    meta(property='og:description', content!=description.substr(0, 160))
     meta(property='og:type', content='website')
     meta(property='og:url', content='#')
     meta(property='og:image', content='#{protocol}#{domain}/themes/barney/public/img/logo.png')
