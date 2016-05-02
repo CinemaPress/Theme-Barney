@@ -10,7 +10,7 @@
 
 ## Установка через установщик тем CinemaPress CMS
 ```
-~# wget cinemapress.org/i -q && chmod +x i && ./i 3
+~# wget cinemapress.org/i -qO i && chmod +x i && ./i 3
 ```
 ###### Видео установки темы через установщик тем
 
